@@ -1,37 +1,22 @@
-% XeLaTeX atbalsts tiek pieslēgts ar šādām pakotnēm:
+\usepackage{titlesec}
+
+% XeLaTeX support
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
-\usepackage{indentfirst}	%pirmais indent katraa section, LOL
 
-% Valodu atbalsts
+% Language support
 \usepackage{polyglossia}
 \setdefaultlanguage{latvian}
 \setotherlanguages{english,russian}
 
-% Lai sekcijas saktos ar 1
-\renewcommand\thesection{\arabic{section}}
-
-% Labojam saturu
-\addto\captionslatvian{
-	\renewcommand*\contentsname{\centering \MakeUppercase{Saturs}}
-}
-
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
-
-%attēli
-\graphicspath{ {diagrams/}, {images/} }
-
-%pielikumam
-%\usepackage[toc,page]{appendix}
-
-% Fonti -- var rakstīt sistēmas fontu nosaukumus
-\setmainfont[Mapping=tex-text]{Times New Roman}
-\setsansfont[Mapping=tex-text]{Times New Roman}
-\newfontfamily\russianfont{Times New Roman}
-\selectlanguage{latvian}
-
+%user defines
 \title{Attēlu apstrāde lietojot heterogēnas, iegultās sistēmas}
 \author{Rihards Novickis}
-
-\input{titullapa.sty}
+\newcommand{\advisor}{
+	  Zinātniskais vadītājs\\
+      Datorzinātņu doktors\\
+      \large{\MakeUppercase{M. Greitāns}}
+}
+\def \student_number{111REB756}
+\def \programm_description{Elektronikas maģistra programmas students}
