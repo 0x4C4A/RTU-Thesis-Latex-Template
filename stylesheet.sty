@@ -55,3 +55,17 @@
 
 %spacing
 \linespread{1.5}
+
+% Insert graphical element
+% arg #1 - image filename
+% arg #2 - image label(for referencing)
+% arg #3 - image caption(visible in document)
+% arg #4 - image width relative to the text width
+\newcommand{\graphics}[4]{
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=#4\textwidth]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
