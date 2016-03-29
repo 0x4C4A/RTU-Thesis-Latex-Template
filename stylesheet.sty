@@ -1,0 +1,57 @@
+\usepackage{titlesec}
+
+\titleformat*{\section}{\large\bfseries\centering}
+\newcommand{\customSection}[1]{
+		\newpage
+		\section{\MakeUppercase{#1}}
+}
+
+\titleformat*{\subsection}{\normalsize\bfseries\centering}
+\newcommand{\customSubSection}[1]{
+		\subsection{#1}
+		~\linebreak[1]
+}
+
+\titleformat*{\subsubsection}{\normalsize\bfseries\centering}
+\newcommand{\customSubSubSection}[1]{
+		\subsubsection{#1}
+		~\linebreak[1]
+}
+
+%remove spacing in itmeize
+\usepackage{enumitem} 
+\setlist[itemize]{noitemsep, nolistsep}
+
+%\newcommand{\customSection}[1]{
+%	\section*{
+%		\begin{center}
+%			\MakeUppercase{#1}	
+%		\end{center}
+%	}
+%}
+
+%TODO Kaut kādas makrosa problēmas
+%\renewcommand\section{\@startsection{section}{1}{\z@}
+%	{-3.5ex \@plus1ex \@minus.2ex}
+%	{2.3ex \@plus.2ex}
+%	{\normalfont\Large\bfseries}}
+
+
+%\renewcommand*\contentsname{
+%		\begin{center}
+%			\MakeUppercase{Saturs}	
+%		\end{center}
+%	}
+
+% general page margins
+\usepackage{geometry}
+  \geometry{
+  a4paper,
+  left=3.18cm,
+  right=3.18cm,
+  top=2.54cm,
+  bottom=2.54cm
+  }
+
+%spacing
+\linespread{1.5}
