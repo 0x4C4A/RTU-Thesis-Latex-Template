@@ -5,5 +5,32 @@
 \input{title_page.sty}
 
 \begin{document}
+
+% title page
+\pagenumbering{gobble}  % switch off page numbering
 \title_page
+\pagenumbering{arabic}  % switch on page numbering
+\setcounter{page}{2}	% page counter
+
+% empty page
+\newpage\null\thispagestyle{empty}\newpage
+
+
+% TODO redefine section command
+% annotation - Latvian
+\newpage
+\selectlanguage{latvian}
+\section*{Annotācija}
+~\linebreak[1]
+\input{annotations/annotation_lv.tex}
+
+% annotation - English
+\newpage
+\selectlanguage{english}
+\section*{Annotation}
+~\linebreak[1]
+\input{annotations/annotation_en.tex}
+
+\selectlanguage{latvian}
+
 \end{document}
